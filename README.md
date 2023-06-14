@@ -41,10 +41,13 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 - Renomeie o arquivo .env.example para .env.
 - Abra o arquivo .env e configure as variáveis de ambiente, como a URL do banco de dados e a chave secreta para JWT.
 
+Obs. O Prisma está configurado com o SQLite. Não é necessário instalar ou configurar outros bancos de dados para rodar em localhost.
+
 5. Execute as migrações do bando de dados:
 
 ```bash
   npx prisma migrate dev
+
 ```
 
     
@@ -52,6 +55,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 Execute o seguinte comando para iniciar o servidor:
 ```bash
   npm run dev
+
 ```
 O servidor será iniciado e estará disponível em http://localhost:3333.
 ## Rotas
@@ -61,3 +65,13 @@ A API oferece as seguintes rotas:
 - GET /users : Retorna todos os usuários cadastrados.
 - PUT /edit-user : Atualiza um usuário específico com base no ID.
 - DELETE /delete : Exclui um usuário específico com base no ID.
+
+Certifique-se de incluir o token JWT no cabeçalho de autorização (Bearer token) para acessar as rotas protegidas.
+## Contribuição
+
+Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma "Issue" (problema) ou enviar um "Pull Request" (solicitação de envio de código). Será um prazer receber feedbacks e melhorias para tornar este projeto ainda melhor.
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](/LICENSE.md) para obter mais informações.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)

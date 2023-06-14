@@ -28,7 +28,6 @@ export async function authRoutes(app: FastifyInstance) {
       reply.code(401).send('Usuário ou senha incorretos')
     }
 
-    console.log(userAlreadyExists.id)
     const token = app.jwt.sign(
       {
         name: userAlreadyExists.name,

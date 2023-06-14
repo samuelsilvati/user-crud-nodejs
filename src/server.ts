@@ -20,7 +20,7 @@ app.register(userRoutes)
 app.register(authRoutes)
 
 app.register(jwt, {
-  secret: 'todo-list',
+  secret: `${process.env.JWT_SECRET}`,
 })
 
 app

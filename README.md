@@ -72,6 +72,6 @@ Certifique-se de incluir o token JWT no cabeçalho de autorização (Bearer toke
 Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma "Issue" (problema) ou enviar um "Pull Request" (solicitação de envio de código). Será um prazer receber feedbacks e melhorias para tornar este projeto ainda melhor.
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](/LICENSE.md) para obter mais informações.
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](/LICENSE) para obter mais informações.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)

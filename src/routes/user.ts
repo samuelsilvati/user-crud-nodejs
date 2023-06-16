@@ -9,6 +9,12 @@ interface CreateUserRequest {
 }
 
 export async function userRoutes(app: FastifyInstance) {
+  app.get('/users', async (request) => {
+    await request.jwtVerify()
+    const users = await prisma.user.findMany()
+    return users
+  })
+
   app.post('/signup', async (request, reply) => {
     const { name, email, password } = request.body as CreateUserRequest
 

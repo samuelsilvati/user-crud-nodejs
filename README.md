@@ -47,24 +47,42 @@ Obs. O Prisma está configurado com o SQLite. Não é necessário instalar ou co
 
 ```bash
   npx prisma migrate dev
-
 ```
-
     
 ## Executando o Projeto
 Execute o seguinte comando para iniciar o servidor:
 ```bash
   npm run dev
-
 ```
 O servidor será iniciado e estará disponível em http://localhost:3333.
 ## Rotas
 A API oferece as seguintes rotas:
-- POST /signup : Registra um novo usuário.
-- POST /auth : Autentica um usuário e retorna um token JWT.
+- POST /signup : Registra um novo usuário.<br>Payload: 
+```bash
+  {
+	"name":"Your Name",
+	"email":"email@email.com",
+	"password" : "123456"
+  }
+```
+- POST /auth : Autentica um usuário e retorna um token JWT.<br>Payload: 
+```bash
+  {
+	"email":"email@email.com",
+	"password" : "123456"
+  }
+```
 - GET /users : Retorna todos os usuários cadastrados.
-- PUT /edit-user : Atualiza um usuário específico com base no ID.
+- PUT /edit-user : Atualiza um usuário específico com base no ID.<br>Payload: 
+```bash
+  {
+	"name":"Your Name",
+	"email":"email@email.com",
+	"password" : "123456"
+  }
+```
 - DELETE /delete : Exclui um usuário específico com base no ID.
+
 
 Certifique-se de incluir o token JWT no cabeçalho de autorização (Bearer token) para acessar as rotas protegidas.
 ## Contribuição

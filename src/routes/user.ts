@@ -57,7 +57,7 @@ export async function userRoutes(app: FastifyInstance) {
         },
       })
 
-      reply.code(201).send(editUser)
+      reply.code(200).send(editUser)
     } catch (err) {
       reply.code(500).send({ message: 'Erro ao editar dados' })
     }
@@ -73,7 +73,7 @@ export async function userRoutes(app: FastifyInstance) {
         },
       })
 
-      reply.code(201).send()
+      reply.code(200).send()
     } catch (err) {
       reply.code(500).send({ message: 'Erro ao apagar cadastro' })
     }
